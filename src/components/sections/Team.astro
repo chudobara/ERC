@@ -1,0 +1,85 @@
+---
+import SectionTitle from "../ui/SectionTitle.astro";
+import TeamCard from "../ui/TeamCard.astro";
+import Section from "./Section.astro";
+
+const description =
+  "\nProfesionales de la salud con vocación, experiencia y compromiso con cada paciente.";
+
+// Team images
+import p1 from "../../assets/team/t1.png";
+import p2 from "../../assets/team/t2.png";
+import p3 from "../../assets/team/t3.png";
+import p4 from "../../assets/team/t4.png";
+import p5 from "../../assets/team/t5.png";
+import p6 from "../../assets/team/t6.png";
+
+const team = [
+{
+    pic: p1,
+    name: "Lic. María Laura González",
+    role: "Co-fundadora · Instrumentadora Quirúrgica",
+    description:
+      "Docente universitaria, diplomada en Neurociencias y Neuropsicología Cognitiva. Con amplia experiencia en asistencia quirúrgica y atención domiciliaria.",
+    link: "https://linkedin.com",
+  },
+  {
+    pic: p2,
+    name: "Lic. Julieta Alfonzo",
+    role: "Co-fundadora · Enfermera Profesional",
+    description:
+      "Especialista en Investigación de Cuidados y Calidad de Vida. Referente en atención humanizada y formación de cuidadores.",
+    link: "https://linkedin.com",
+  }
+];
+---
+
+<style>
+  .team-card {
+    padding: 2.5rem; /* Aumentado el padding */
+    margin-bottom: 6rem; /* Incrementado el margen inferior para mayor separación */
+  }
+
+  .team-card .name {
+    font-size: 2rem; /* Tamaño de fuente más grande para el nombre */
+    font-weight: bold;
+  }
+
+  .team-card .role {
+    font-size: 1.75rem; /* Tamaño de fuente más grande para el rol */
+    font-style: italic;
+  }
+
+  .team-card .description {
+    font-size: 1.25rem; /* Tamaño de fuente más grande para la descripción */
+    line-height: 1.75;
+  }
+
+  .team-grid {
+    display: flex;
+    flex-direction: column; /* Apilar las tarjetas verticalmente */
+    gap: 2rem; /* Espaciado entre las tarjetas */
+    margin-bottom: 6rem; /* Añadido margen inferior a la cuadrícula para evitar solapamiento con la sección siguiente */
+  }
+</style>
+
+<Section id="about">
+  <div class="mt-[140px]">
+    <SectionTitle sectionTitle="Conocé al equipo de C.E.R Cuidados" description={description} />
+    <div class="team-grid">
+      {
+        team.map((member, index) => (
+          <TeamCard
+            key={index}
+            class="team-card"
+            pic={member.pic}
+            name={member.name}
+            role={member.role}
+            description={member.description}
+            link={member.link}
+          />
+        ))
+      }
+    </div>
+  </div>
+</Section>

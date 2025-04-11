@@ -1,0 +1,63 @@
+---
+import Footer from "../components/ui/Footer.astro";
+import Navbar from "../components/ui/Navbar.astro";
+import MainHead from "./MainHead.astro";
+import "../styles/global.css";
+
+const { ...props } = Astro.props;
+---
+
+<html lang="en">
+  <MainHead {...props} />
+  <style>
+    html.lenis {
+      height: auto;
+    }
+    .lenis.lenis-smooth {
+      scroll-behavior: auto;
+    }
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      cursor: pointer;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebe57;
+    }
+  </style>
+  <script src="../utils/lenis"></script>
+  <body class="bg-white font-grotesk">
+    <main>
+      <Navbar />
+      <slot />
+      <Footer />
+    </main>
+    <a
+      href="https://wa.me/5491124097433" 
+      class="whatsapp-button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="/src/assets/icon10.png" alt="WhatsApp" width="30" height="30" />
+    </a>
+  </body>
+</html>

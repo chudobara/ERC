@@ -1,0 +1,32 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Sponsors from "../components/sections/Sponsors.astro";
+import Services from "../components/sections/Services.astro";
+import Team from "../components/sections/Team.astro";
+---
+
+<MainLayout title="Sobre nosotros">
+  <main class="space-y-20">
+    <div class="py-20 px-8 mx-auto max-w-screen-xl lg:py-28 lg:px-10">
+      <div class="relative flex flex-col md:flex-row items-center" id="hero">
+        <div class="md:w-1/2 text-center md:text-left space-y-14">
+          <h2 class="text-7xl font-normal leading-snug md:text-8xl">
+            Nuestro principal desafío<br />
+          </h2>
+          <p class="mt-10 mb-12 text-3xl font-normal leading-relaxed sm:mb-16">
+            Acompañar al paciente durante todo su proceso de patología, brindando un cuidado absoluto que alivie la carga de la familia. Buscamos fomentar la mejora de su salud y, sobre todo, su calidad de vida, controlando y comprimiendo la enfermedad lo máximo posible, acompañando en esta última etapa de su vida.
+          </p>
+          <p class="mmt-10 mb-12 text-3xl font-normal leading-relaxed sm:mb-16">
+            Somos mujeres profesionales de la salud comprometidas con brindar atención domiciliaria de calidad. 
+            Desde la empatía, el respeto y el conocimiento, acompañamos a personas mayores o con enfermedades en su hogar, 
+            asegurando bienestar, contención y una atención humana disponible las 24 horas, los 365 días del año.
+          </p>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img src="/src/assets/pics/about.png" alt="Hero Image" class="w-full h-auto object-contain" />
+        </div>
+      </div>
+    </div>
+    <Team />
+  </main>
+</MainLayout>

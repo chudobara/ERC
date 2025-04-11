@@ -1,0 +1,38 @@
+---
+import AccordionItem from "./AccordionItem.astro";
+
+const content = [
+  {
+    index: 1,
+    title: "Visión",
+    description: `Poseemos un amplio esquema de organización, lo que nos convierte en una empresa sólida en cuanto a su ejecución. De esta forma, pretendemos brindar un servicio que se caracterice por la responsabilidad, la puntualidad y la eficiencia. Para ello, hemos cuidadosamente seleccionado al personal adecuado y que reúne las cualidades que quienes reciban el servicio podrán comprobar.
+
+Pretendemos generar una mejora continua de los procesos, buscando la máxima calidad y eficiencia de los mismos. De esta forma, buscamos ser una empresa reconocida por su atención de calidad, centrada en el paciente y en un ambiente de trabajo colaborativo y asertivo, que asuma los desafíos acordes a sus valores.`
+  },
+  {
+    index: 2,
+    title: "Valores",
+    description: `Nuestros principios se basan en el compromiso con la salud, la empatía, la responsabilidad y la confianza, la orientación al paciente y su grupo de contención. 
+
+Creemos en los procesos de mejora continua y en el compromiso absoluto con la salud y el bienestar. De esta forma, pretendemos brindar un servicio de excelencia, solidez, confianza y responsabilidad. 
+
+En C.E.R Cuidados creemos que la confianza, la responsabilidad y la calidez son las bases para un servicio de calidad y efectividad, comprometiéndonos permanentemente con el bienestar del paciente y su entorno, brindándoles el mejor servicio.`
+  },
+  {
+    index: 3,
+    title: "Misión",
+    description: `Nuestro principal objetivo es brindar al paciente y su familia un servicio de cuidados eficiente, competitivo y de calidad, pudiendo cubrir las necesidades de quienes más lo necesitan, de la manera en que quisiéramos recibirla nosotras.
+
+Comprometidas con el mejoramiento continuo de nuestros pacientes a través de la atención cálida, segura y centrada en las personas, creemos en nuestros valores primordiales: la calidad, la empatía, la confianza, el respeto y sobre todo, la responsabilidad, con amor y paciencia.
+
+De esta forma, mediante el desarrollo de nuestra atención, buscamos cubrir de manera sólida, eficaz y efectiva las necesidades de salud de nuestra población, propiciando siempre un ambiente de calidez, confianza, responsabilidad y empatía, atendiendo a las necesidades de nuestros pacientes, su grupo de contención y de aprendizaje y capacitación de nuestros cuidadores y enfermeros.`
+  }
+];
+---
+{content.map((item) => (
+  <AccordionItem
+    index={item.index}
+    title={item.title}
+    description={item.description}
+  />
+))}
